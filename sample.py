@@ -1,31 +1,16 @@
-#http://www.tkdocs.com/tutorial/firstexample.html#design
-
-from tkinter import *
-
-from tkinter import ttk
-
-root= Tk()
-root.title("Mohasai")
+import  tkinter as tk
+import tkinter as ttk
+win=tk.Tk()
+win.title("Label Button")
+aLabel = ttk.Label(win, text="A Label")
+aLabel.grid(column=0, row=0) # 1
 
 
-"""
-insert_checkbutton(self, index, cnf={}, **kw)
-     |      Add checkbutton menu item at INDEX.
-     |
-     |  insert_command(self, index, cnf={}, **kw)
-     |      Add command menu item at INDEX.
-     |
-     |  insert_radiobutton(self, index, cnf={}, **kw)
-     |      Addd radio menu item at INDEX.
+def clickMe():
+ print("click me")
+ action.configure(text="** I have been Clicked! **")
+ aLabel.configure(foreground='red') # 5
 
-"""
-Tk.ScrolledText.
-# mainframe = ttk.Frame(root, padding="3 3 12 12")
-
-
-
-
-
-root.mainloop()
-
-
+action = ttk.Button(win, text="Click Me!", command=clickMe)
+action.grid(column=1, row=0)
+win.mainloop()
